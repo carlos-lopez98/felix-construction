@@ -67,7 +67,6 @@ const Navbar = ({ onOpenModal }: Props) => {
                             </li>
                         </ul>
 
-                        <Link href="#estimate" onClick={onOpenModal} className={styles.cta}>REQUEST&nbsp;AN&nbsp;ESTIMATE</Link>
                         {/*************************************************************************************/}
 
                         <button className={`${styles.mobileToggle}`}
@@ -76,6 +75,8 @@ const Navbar = ({ onOpenModal }: Props) => {
                             Menu
                         </button>
                     </div>
+                    <Link href="#estimate" onClick={onOpenModal} className={styles.cta}>REQUEST&nbsp;AN&nbsp;ESTIMATE</Link>
+
                 </nav>
 
                 {/* Mobile Drawer */}
