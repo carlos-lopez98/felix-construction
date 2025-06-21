@@ -6,6 +6,7 @@ import Logo from '@/assets/Construction Temp Logo.png'
 import { usePathname } from 'next/navigation'
 import FadeInWrapper from '../FadeInWrapper/FadeInWrapper';
 import { useState, useEffect } from 'react'
+import ContactModal from '../ContactModal/ContactModal';
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -13,6 +14,7 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
     const [showBar, setShowBar] = useState(true);   // is navbar visible?
     const [lastY, setLastY] = useState(0);        // last scroll position
+    const [isModalOpen, setModalOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -59,7 +61,7 @@ const Navbar = () => {
 
                             </li>
                             <li>
-                                <Link href="/#contact" className={styles.navLink}>Contact</Link>
+                                <a onClick={() => setModalOpen(true)} className={styles.navLink}>Contact</a>
                             </li>
                         </ul>
 
@@ -92,17 +94,17 @@ const Navbar = () => {
                     </ul>
 
                     <div className={styles.mobileCta_container}>
-                        <Link
-                            href="/#estimate"
+                        <a
                             className={styles.mobileCta}
-                            onClick={() => setMenuOpen(false)}
+                            onClick={() => setModalOpen(true)}
                         >
                             REQUEST&nbsp;AN&nbsp;ESTIMATE
-                        </Link>
+                        </a>
                     </div>
 
                 </div>
 
+                <ContactModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
             </FadeInWrapper>
         </header >
     );

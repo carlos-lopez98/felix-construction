@@ -12,6 +12,7 @@ import Link from 'next/link'
 import FadeInWrapper from '../FadeInWrapper/FadeInWrapper';
 
 import { useState, useEffect } from 'react'
+import ContactModal from '../ContactModal/ContactModal';
 
 
 const containerVariants = {
@@ -39,6 +40,7 @@ const itemVariants = {
 
 const Hero = () => {
     const [isMobile, setIsMobile] = useState(false);
+    const [isModalOpen, setModalOpen] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -77,7 +79,7 @@ const Hero = () => {
                                 <p className={styles.body}>Licensed • Bonded • Insured.</p>
                             </div>
 
-                            <a href="#contact" className={styles.contact}>Contact&nbsp;Us</a>
+                            <a href="#contact" className={styles.contact} onClick={() => setModalOpen(true)}>Contact&nbsp;Us</a>
 
                             <div className={styles.services}>
                                 {/* Replace this div with your actual icon component */}
@@ -161,6 +163,8 @@ const Hero = () => {
                         </motion.div>
                     </div>
                 </div>
+
+                <ContactModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
 
             </FadeInWrapper>
 
