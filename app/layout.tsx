@@ -7,14 +7,14 @@ const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000";
 
-export const bebasNeue = Bebas_Neue({
+const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
   variable: "--font-bebas",
 });
 
-export const anton = Anton({
+const anton = Anton({
   weight: "400", // Anton also only has one weight
   subsets: ["latin"],
   display: "swap",
