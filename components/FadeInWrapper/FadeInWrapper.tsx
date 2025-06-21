@@ -15,7 +15,8 @@ export default function FadeInWrapper({ children }: { children: React.ReactNode 
         <div
             style={{
                 opacity: show ? 1 : 0,
-                transition: 'opacity .7s ease-out'
+                transition: 'opacity .7s ease-out',
+                height: '100%'
             }}
         >
             {children}
