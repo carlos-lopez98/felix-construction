@@ -5,6 +5,7 @@ import ServiceCard from './ServiceCard'
 import { Wrench, Home, Layers, Zap, Hammer, PencilRuler, Utensils, TreePine, House } from 'lucide-react'
 import RotatingSlogan from '../ui/RotatingSlogan'
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const cards = [
     {
@@ -116,7 +117,7 @@ export default function About() {
 
             <div className={styles.catalogRow}>
                 <House />
-                <span className={styles.catalogText}>View Full Service Catalog</span>
+                <Link href="/services#full-catalog" className={styles.catalogText}>View Full Service Catalog</Link>
             </div>
 
             <div className={styles.contactRow}>

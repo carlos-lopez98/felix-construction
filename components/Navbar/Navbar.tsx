@@ -42,9 +42,7 @@ const Navbar = () => {
                             <Image src={Logo.src} alt="Logo" width={64} height={64} />
                         </div>
 
-                        <a href="#hero">
-                            <h1 className={styles.business_name}>FELIX CONSTRUCTION</h1>
-                        </a>
+                        <Link href="/#hero" className={styles.business_name}>FELIX CONSTRUCTION</Link>
 
                         <div className={styles.vertDivider} />
 
