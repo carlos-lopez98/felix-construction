@@ -105,7 +105,7 @@ const Hero = ({ onOpenModal }: Props) => {
                                     src={adu.src}
                                     alt="Kitchen Remodels"
                                     fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 20vw"
                                     style={{ objectFit: 'cover' }}
                                     priority
                                 />
@@ -130,7 +130,7 @@ const Hero = ({ onOpenModal }: Props) => {
                                     src={bathroom.src}
                                     alt="Kitchen Remodels"
                                     fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 20vw"
                                     style={{ objectFit: 'cover' }}
                                     priority
                                 />
@@ -153,7 +153,7 @@ const Hero = ({ onOpenModal }: Props) => {
                                     src={kitchen.src}
                                     alt="Kitchen Remodels"
                                     fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 20vw"
                                     style={{ objectFit: 'cover' }}
                                     priority
                                 />

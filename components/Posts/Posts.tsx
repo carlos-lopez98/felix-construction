@@ -34,10 +34,12 @@ export default function Posts() {
                             <Image
                                 src={src.src} // or just src if src is a string
                                 alt={`Post ${idx + 1}`}
-                                fill
+                                width={220}
+                                height={280}
                                 sizes="(max-width: 768px) 500px, 500px"
-                                style={{ objectFit: 'cover', borderRadius: '4px' }}
+                                style={{ objectFit: 'cover' }}
                                 loading="lazy"
+                                className={styles.image}
                             />
                             {/* <img src={src.src} alt={`Post ${idx + 1}`} className={styles.image} /> */}
                             <div className={styles.hoverText}>
