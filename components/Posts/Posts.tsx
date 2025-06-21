@@ -31,7 +31,6 @@ export default function Posts() {
                 <div className={styles.imageRow}>
                     {images.map((src, idx) => (
                         <div key={idx} className={styles.imageContainer}>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <Image
                                 src={src.src} // or just src if src is a string
                                 alt={`Post ${idx + 1}`}
