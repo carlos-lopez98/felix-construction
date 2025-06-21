@@ -18,7 +18,7 @@ export default function Posts() {
                 <RotatingSlogan width="400px" centered={true}
                     phrases={[
                         <span key="en" className={styles.rotating_text}>Built with <span className={styles.highlight}>Pride.</span> See for <span className={styles.highlight}>Yourself.</span></span>,
-                        <span key="es" className={styles.rotating_text}>Construido con <span className={styles.highlight}>Orgullo.</span> Vea usted <span className={styles.highlight}>Mismo.</span></span>,
+                        <span key="es" className={styles.rotating_text}>Construido con <span className={styles.highlight}>Orgullo.</span> <span className={styles.breakMobile}>Vea usted <span className={styles.highlight}>Mismo.</span></span></span>,
                     ]}
                 />
             </div>

@@ -50,9 +50,11 @@ const cards = [
     }
 ]
 
+type Props = {
+    onOpenModal: () => void
+}
 
-
-export default function About() {
+export default function About({ onOpenModal }: Props) {
     const [isMobile, setIsMobile] = useState(false);
 
     const chunkCards = (arr: typeof cards, size: number) => {
@@ -84,7 +86,7 @@ export default function About() {
                 <RotatingSlogan width="700px" centered={true}
                     phrases={[
                         <span key="en" className={styles.rotatingText}>Every job is <span className={styles.highlight}>BUILT</span> by Family</span>,
-                        <span key="es" className={styles.rotatingText}>Cada trabajo se <span className={styles.highlight}>CONSTRUYE</span> con Familia</span>,
+                        <span key="es" className={styles.rotatingText}>Cada trabajo se <span className={styles.highlight}>CONSTRUYE</span> <span className={styles.breakMobile}>con Familia</span></span>,
                     ]}
                 />
             </motion.div>
@@ -120,7 +122,7 @@ export default function About() {
                 <Link href="/services#full-catalog" className={styles.catalogText}>View Full Service Catalog</Link>
             </div>
 
-            <div className={styles.contactRow}>
+            <div className={styles.contactRow} onClick={onOpenModal}>
                 Contact Us
             </div>
         </section>

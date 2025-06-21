@@ -6,7 +6,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-export default function Footer() {
+type Props = {
+    onOpenModal: () => void;
+}
+
+export default function Footer({ onOpenModal }: Props) {
     const pathname = usePathname();
     const isServicesPage = pathname === '/services';
 
@@ -18,7 +22,7 @@ export default function Footer() {
             <div className={styles.footerContent}>
                 {/* Left Column – Logo */}
                 <div className={styles.logoColumn}>
-                    <Image src={Logo.src} alt="Logo" width={128} height={128} />
+                    <Image src={Logo.src} alt="Logo" width={96} height={96} />
                     <h1 className={styles.logo}>FELIX CONSTRUCTION</h1>
                 </div>
 
@@ -39,7 +43,7 @@ export default function Footer() {
                         </div>
 
 
-                        <button className={styles.contactButton}>Contact Us</button>
+                        <button className={styles.contactButton} onClick={onOpenModal}>Contact Us</button>
                     </div>
 
                     <div className={styles.dividerTwo} />

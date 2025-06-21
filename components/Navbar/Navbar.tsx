@@ -6,15 +6,17 @@ import Logo from '@/assets/Construction Temp Logo.png'
 import { usePathname } from 'next/navigation'
 import FadeInWrapper from '../FadeInWrapper/FadeInWrapper';
 import { useState, useEffect } from 'react'
-import ContactModal from '../ContactModal/ContactModal';
 
-const Navbar = () => {
+type Props = {
+    onOpenModal: () => void
+}
+
+const Navbar = ({ onOpenModal }: Props) => {
     const pathname = usePathname();
     const isServicesPage = pathname === '/services';
     const [menuOpen, setMenuOpen] = useState(false)
     const [showBar, setShowBar] = useState(true);   // is navbar visible?
     const [lastY, setLastY] = useState(0);        // last scroll position
-    const [isModalOpen, setModalOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -61,7 +63,7 @@ const Navbar = () => {
 
                             </li>
                             <li>
-                                <a onClick={() => setModalOpen(true)} className={styles.navLink}>Contact</a>
+                                <a onClick={onOpenModal} className={styles.navLink}>Contact</a>
                             </li>
                         </ul>
 
@@ -72,7 +74,7 @@ const Navbar = () => {
                         </button>
                     </div>
 
-                    <Link href="#estimate" className={styles.cta}>REQUEST&nbsp;AN&nbsp;ESTIMATE</Link>
+                    <Link href="#estimate" onClick={onOpenModal} className={styles.cta}>REQUEST&nbsp;AN&nbsp;ESTIMATE</Link>
                 </nav>
 
                 {/* Mobile Drawer */}
@@ -85,26 +87,26 @@ const Navbar = () => {
                     <ul className={styles.mobileLinks}>
                         <li>    {isServicesPage ? (
                             <Link href="#full-catalog" onClick={() => setMenuOpen(false)} className={styles.navLink}>Services</Link>
-
                         ) : (
-                            <Link href="/#services" className={styles.navLink}>Services</Link>
+                            <Link href="/#services" onClick={() => setMenuOpen(false)} className={styles.navLink}>Services</Link>
                         )}</li>
                         <li><Link href="/#meettheteam" onClick={() => setMenuOpen(false)}>About</Link></li>
-                        <li><Link href="/#contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
+                        <li><Link href="/#contact" onClick={() => {
+                            setMenuOpen(false);
+                            onOpenModal();
+                        }}>Contact</Link></li>
                     </ul>
 
                     <div className={styles.mobileCta_container}>
                         <a
                             className={styles.mobileCta}
-                            onClick={() => setModalOpen(true)}
+                            onClick={onOpenModal}
                         >
                             REQUEST&nbsp;AN&nbsp;ESTIMATE
                         </a>
                     </div>
 
                 </div>
-
-                <ContactModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
             </FadeInWrapper>
         </header >
     );

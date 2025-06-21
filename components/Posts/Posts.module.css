@@ -139,6 +139,10 @@
     cursor: pointer;
 }
 
+.breakMobile {
+    display: inline;
+}
+
 @media (max-width: 768px) {
     .postsSection {
         height: auto;
@@ -165,7 +169,7 @@
     }
 
     .rotating_slogan {
-        padding: 0 1rem 1rem;
+        padding: 0rem 1rem 4rem 1rem;
     }
 
     .topText {
@@ -178,5 +182,9 @@
 
     .rotating_text {
         font-size: 1.35rem;
+    }
+
+    .breakMobile {
+        display: block;
     }
 }

@@ -10,9 +10,11 @@ import RotatingSlogan from '@/components/ui/RotatingSlogan';
 import { circOut, motion } from 'framer-motion'
 import Link from 'next/link'
 import FadeInWrapper from '../FadeInWrapper/FadeInWrapper';
-
 import { useState, useEffect } from 'react'
-import ContactModal from '../ContactModal/ContactModal';
+
+type Props = {
+    onOpenModal: () => void;
+}
 
 
 const containerVariants = {
@@ -38,9 +40,8 @@ const itemVariants = {
 
 
 
-const Hero = () => {
+const Hero = ({ onOpenModal }: Props) => {
     const [isMobile, setIsMobile] = useState(false);
-    const [isModalOpen, setModalOpen] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -65,7 +66,7 @@ const Hero = () => {
                                 <RotatingSlogan width="400px" centered={isMobile}
                                     phrases={[
                                         <span key="en">We are <span className={styles.highlight}>BUILDERS</span></span>,
-                                        <span key="es">Somos <span className={styles.highlight}>CONSTRUCTORES</span></span>,
+                                        <span key="es">Somos <span className={`${styles.highlight} ${styles.breakMobile}`}>CONSTRUCTORES</span></span>,
                                     ]}
                                 />
                             </div>
@@ -79,7 +80,7 @@ const Hero = () => {
                                 <p className={styles.body}>Licensed • Bonded • Insured.</p>
                             </div>
 
-                            <a href="#contact" className={styles.contact} onClick={() => setModalOpen(true)}>Contact&nbsp;Us</a>
+                            <a href="#contact" className={styles.contact} onClick={onOpenModal}>Contact&nbsp;Us</a>
 
                             <div className={styles.services}>
                                 {/* Replace this div with your actual icon component */}
@@ -163,8 +164,6 @@ const Hero = () => {
                         </motion.div>
                     </div>
                 </div>
-
-                <ContactModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
 
             </FadeInWrapper>
 
