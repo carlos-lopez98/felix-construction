@@ -1,11 +1,25 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Anton, Bebas_Neue, Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000";
+
+export const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-bebas",
+});
+
+export const anton = Anton({
+  weight: "400", // Anton also only has one weight
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-anton",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
@@ -24,7 +38,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
+      <body className={`${geistSans.className} ${bebasNeue.variable} ${anton.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

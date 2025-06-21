@@ -25,13 +25,14 @@
     padding-top: 4rem;
     padding-bottom: 2rem;
     text-align: center;
+
+
 }
 
 .backgroundTitle {
     position: relative;
-    font-size: 8rem;
-    /* Adjust for responsiveness if needed */
-    font-weight: 900;
+    font-size: 15rem;
+    font-weight: 400;
     color: rgba(255, 255, 255, 0.10);
     top: 0;
     left: 50%;
@@ -40,6 +41,10 @@
     pointer-events: none;
     user-select: none;
     white-space: nowrap;
+
+    font-family: var(--font-bebas);
+    /* font-size: 2.5rem; */
+    letter-spacing: .25rem;
 }
 
 .foregroundContent {
@@ -50,6 +55,8 @@
 
 .mainTitle {
     color: white;
+    font-family: var(--font-bebas);
+    letter-spacing: .15rem;
     font-size: 2.5rem;
     font-weight: bold;
     margin: 0;
@@ -111,7 +118,7 @@
 
 
     .backgroundTitle {
-        font-size: 4.8rem;
+        font-size: 7.5rem;
         /* Adjust for responsiveness if needed */
         font-weight: 900;
         color: rgba(255, 255, 255, 0.08);

@@ -7,8 +7,7 @@ export default function FadeInWrapper({ children }: { children: React.ReactNode 
     const [show, setShow] = useState(false);
 
     useEffect(() => {
-        const t = setTimeout(() => setShow(true), 100);
-        return () => clearTimeout(t);
+        setShow(true);
     }, []);
 
     return (

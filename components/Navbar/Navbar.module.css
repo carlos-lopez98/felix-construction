@@ -27,6 +27,9 @@
 .business_name {
     color: white;
     font-weight: 500;
+    font-family: var(--font-bebas);
+    letter-spacing: .1rem;
+    font-size: 1.7rem;
     text-decoration: none;
     transition: transform 0.4s ease, color 0.4s ease;
 }
@@ -44,6 +47,9 @@
     flex-direction: row;
     gap: 1.5rem;
     align-items: center;
+    font-family: var(--font-bebas);
+    font-size: 1.0rem;
+    letter-spacing: .1rem;
 }
 
 .vertDivider {
@@ -96,10 +102,14 @@
     /* lighter orange */
     color: #ffffff;
     padding: 0.75rem 2rem;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
     transition: background 0.3s ease, transform 0.3s ease;
     white-space: nowrap;
+
+    font-family: var(--font-bebas);
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
 }
 
 .cta:hover {
@@ -221,6 +231,7 @@
 
     .left {
         display: flex;
+        position: relative;
         flex-direction: row;
         width: 100%;
         flex-direction: row;
@@ -265,5 +276,10 @@
 
     .business_name {
         font-size: 1rem;
+        position: absolute;
+        text-align: center;
+        z-index: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

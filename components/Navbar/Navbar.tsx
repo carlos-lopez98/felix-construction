@@ -48,8 +48,9 @@ const Navbar = ({ onOpenModal }: Props) => {
 
                         <Link href="/#hero" className={styles.business_name}>FELIX CONSTRUCTION</Link>
 
-                        <div className={styles.vertDivider} />
 
+                        {/* DOES NOT DISPLAY ON MOBILE */}
+                        <div className={styles.vertDivider} />
                         <ul className={styles.links}>
                             <li>
                                 {isServicesPage ? (
@@ -60,12 +61,14 @@ const Navbar = ({ onOpenModal }: Props) => {
                             </li>
                             <li>
                                 <Link href="/#meettheteam" className={styles.navLink}>About</Link>
-
                             </li>
                             <li>
                                 <a onClick={onOpenModal} className={styles.navLink}>Contact</a>
                             </li>
                         </ul>
+
+                        <Link href="#estimate" onClick={onOpenModal} className={styles.cta}>REQUEST&nbsp;AN&nbsp;ESTIMATE</Link>
+                        {/*************************************************************************************/}
 
                         <button className={`${styles.mobileToggle}`}
                             onClick={() => setMenuOpen((open) => !open)}
@@ -73,8 +76,6 @@ const Navbar = ({ onOpenModal }: Props) => {
                             Menu
                         </button>
                     </div>
-
-                    <Link href="#estimate" onClick={onOpenModal} className={styles.cta}>REQUEST&nbsp;AN&nbsp;ESTIMATE</Link>
                 </nav>
 
                 {/* Mobile Drawer */}
