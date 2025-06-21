@@ -1,0 +1,143 @@
+.footer {
+    position: relative;
+    background-color: #060b13;
+    color: white;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 100vw;
+    background-color: rgba(128, 128, 128, 0.35);
+}
+
+.dividerTwo {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.35);
+}
+
+.footerContent {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem 7rem;
+    gap: 4rem;
+}
+
+/* Column 1 – Logo */
+.logoColumn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Column 2 – Info Section */
+.infoColumn {
+    position: relative;
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Row 1 – Nav + Button */
+.navRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.links {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.links a {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #ffb657;
+}
+
+/* Contact Us Button */
+.contactButton {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contactButton:hover {
+    background-color: #ffb657;
+    color: #060b13;
+}
+
+/* Row 2 – Quote */
+.quote {
+    font-weight: 500;
+    color: #cccccc;
+    font-size: 1.5rem;
+}
+
+/* Row 3 – Social Icons */
+.socials {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.socials svg {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.socials svg:hover {
+    color: #ffb657;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .navRow {
+        flex-direction: column;
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}

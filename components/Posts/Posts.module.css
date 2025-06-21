@@ -1,0 +1,182 @@
+.postsSection {
+    background-color: #060b13;
+    padding: 4rem .5rem;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100vh
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.rotating_slogan {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.highlight {
+    color: #ff7a00;
+}
+
+.divider {
+    width: 100px;
+    height: 2px;
+    background-color: rgba(255, 122, 0, 0.75);
+    margin: 0 auto 2rem auto;
+}
+
+.imageRow {
+    display: flex;
+    height: 50%;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.imageContainer {
+    position: relative;
+    width: 200px;
+    height: 225px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.hoverText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+}
+
+.imageContainer:hover .hoverText {
+    opacity: .85;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.topText {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.bottomText {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.25rem;
+}
+
+.instagramIcon {
+    font-size: 1rem;
+}
+
+.container_bot {
+    height: 100%;
+    gap: 2rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* dark overlay */
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.imageContainer:hover .image {
+    transform: scale(1.05);
+}
+
+.imageContainer:hover .overlay {
+    background-color: rgba(6, 11, 19, 0.4);
+    cursor: pointer;
+    /* darker on hover */
+}
+
+.ctaButton {
+    width: 100%;
+    padding: 1.25rem 0;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: #111827;
+    color: white;
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    cursor: pointer;
+    transition: background-color .8s ease;
+    letter-spacing: 1px;
+}
+
+.ctaButton:hover {
+    background-color: rgba(233, 109, 0, .85);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .postsSection {
+        height: auto;
+        padding: 5rem 1rem;
+    }
+
+    .imageRow {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .imageContainer {
+        width: 90%;
+        height: 200px;
+    }
+
+    .ctaButton {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+
+    .rotating_slogan {
+        padding: 0 1rem 1rem;
+    }
+
+    .topText {
+        font-size: 0.9rem;
+    }
+
+    .bottomText {
+        font-size: 0.85rem;
+    }
+
+    .rotating_text {
+        font-size: 1.35rem;
+    }
+}

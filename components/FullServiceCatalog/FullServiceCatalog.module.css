@@ -1,0 +1,119 @@
+.servicesSection {
+    background-color: #060b13;
+    color: white;
+}
+
+.full_container {
+    padding: 6rem 2rem;
+}
+
+.headerStack_container {
+    height: 400px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerStack {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.backgroundTitle {
+    position: relative;
+    font-size: 8rem;
+    /* Adjust for responsiveness if needed */
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.10);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.foregroundContent {
+    position: absolute;
+    padding-top: 1.5rem;
+    z-index: 1;
+}
+
+.mainTitle {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.subText {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #9ca3af;
+    /* Tailwind gray-400 */
+}
+
+.heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.cardsGrid {
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.columns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.service_card {
+    width: 45%;
+}
+
+@media (max-width: 768px) {
+    .column {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .service_card {
+        width: 100%;
+    }
+
+
+    .backgroundTitle {
+        font-size: 5.5rem;
+        /* Adjust for responsiveness if needed */
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.08);
+    }
+
+    .mainTitle {
+        font-size: 2.2rem;
+    }
+}

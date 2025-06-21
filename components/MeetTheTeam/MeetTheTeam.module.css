@@ -1,0 +1,69 @@
+.teamSection {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../assets/parallax.webp');
+    /* swap later if needed */
+    background-attachment: fixed;
+    /* parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    padding-right: 4rem;
+}
+
+.overlayContent {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    background-color: #060b13;
+    padding: 2rem;
+    border: 2px solid #ff7a00;
+}
+
+.teamDivider {
+    color: white;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.description {
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .teamSection {
+        align-items: flex-start;
+        /* move content to the top */
+        justify-content: center;
+        /* center horizontally */
+        padding: 2rem;
+        /* reduce padding */
+    }
+
+    .overlayContent {
+        margin-top: 2rem;
+        /* push it down a bit from top */
+        width: 100%;
+        max-width: none;
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+}

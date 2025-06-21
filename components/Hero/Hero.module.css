@@ -1,0 +1,213 @@
+/* Dark background for the entire hero area */
+.hero {
+    background-color: #060b13;
+    /* near‑black, dark blue */
+    color: #ffffff;
+    padding: 4rem 2rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid_container {
+    background-color: #060b13;
+    /* near‑black, dark blue */
+    color: #ffffff;
+    padding: 4rem 2rem;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 4‑column grid layout */
+.grid {
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0rem;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+/* First column broken into 7 rows */
+.colText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+
+}
+
+/* Row‑specific styling */
+.since {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    letter-spacing: 0.1em;
+}
+
+.slogan {
+    font-size: clamp(2rem, 4vw + 1rem, 4rem);
+    line-height: 1.1;
+    margin: 0;
+}
+
+.highlight {
+    color: #ff7a00;
+    /* bright orange */
+}
+
+.body {
+    font-size: 1rem;
+    line-height: 1.4;
+    opacity: 0.95;
+}
+
+.contact {
+    font-size: 1rem;
+    text-decoration: underline;
+    color: #ff7a00;
+    cursor: pointer;
+    width: max-content;
+}
+
+.services {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    transition: transform 0.4s ease, color 0.4s ease;
+    ;
+}
+
+.services:hover {
+    transform: scale(1.05);
+    color: #ff7a00;
+    cursor: pointer;
+}
+
+.iconPlaceholder {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+/* Generic image card styling for columns 2‑4 */
+.imageCard {
+    position: relative;
+    background: #1a1f2b;
+    /* subtle dark panel */
+    overflow: hidden;
+    min-height: 500;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageCard img {
+    transition: transform 0.4s ease;
+}
+
+.imageCard:hover img {
+    transform: scale(1.05);
+}
+
+.imageCard:hover {
+    border: 1px dashed rgba(255, 255, 255, 0.80);
+    cursor: pointer;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* dark semi-transparent overlay */
+    z-index: 1;
+}
+
+.rotating_slogan {
+    z-index: 2;
+}
+
+.imageLabel {
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    pointer-events: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 2;
+    transition: transform 0.4s ease, font-size 0.4s ease;
+}
+
+.imageCard:hover .imageLabel {
+    transform: scale(1.05);
+    font-size: 1.35rem;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        height: 100%;
+        justify-content: center;
+    }
+
+    .grid_container {
+        height: 100%;
+    }
+
+    .grid {
+        flex-direction: column;
+        gap: 2rem;
+        height: 100%;
+    }
+
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .colText {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem 0rem;
+    }
+
+    .services {
+        justify-content: center;
+    }
+
+    .imageCard {
+        width: 100%;
+        min-height: 250px;
+    }
+
+    .rotatingSlogan {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
