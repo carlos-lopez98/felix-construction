@@ -106,6 +106,7 @@ const Hero = ({ onOpenModal }: Props) => {
                                     alt="Kitchen Remodels"
                                     layout="fill"
                                     objectFit="cover"
+                                    priority
                                 />
                                 <div className={styles.overlay} />
 
@@ -129,6 +130,7 @@ const Hero = ({ onOpenModal }: Props) => {
                                     alt="Kitchen Remodels"
                                     layout="fill"
                                     objectFit="cover"
+                                    priority
                                 />
                                 <div className={styles.overlay} />
                                 <div className={styles.rotating_slogan}>
@@ -150,6 +152,7 @@ const Hero = ({ onOpenModal }: Props) => {
                                     alt="Kitchen Remodels"
                                     layout="fill"
                                     objectFit="cover"
+                                    priority
                                 />
                                 <div className={styles.overlay} />
                                 <div className={styles.rotating_slogan}>
