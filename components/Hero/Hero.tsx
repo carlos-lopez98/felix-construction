@@ -104,8 +104,9 @@ const Hero = ({ onOpenModal }: Props) => {
                                 <Image
                                     src={adu.src}
                                     alt="Kitchen Remodels"
-                                    layout="fill"
-                                    objectFit="cover"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                                    style={{ objectFit: 'cover' }}
                                     priority
                                 />
                                 <div className={styles.overlay} />
@@ -128,8 +129,9 @@ const Hero = ({ onOpenModal }: Props) => {
                                 <Image
                                     src={bathroom.src}
                                     alt="Kitchen Remodels"
-                                    layout="fill"
-                                    objectFit="cover"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                                    style={{ objectFit: 'cover' }}
                                     priority
                                 />
                                 <div className={styles.overlay} />
@@ -150,8 +152,9 @@ const Hero = ({ onOpenModal }: Props) => {
                                 <Image
                                     src={kitchen.src}
                                     alt="Kitchen Remodels"
-                                    layout="fill"
-                                    objectFit="cover"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                                    style={{ objectFit: 'cover' }}
                                     priority
                                 />
                                 <div className={styles.overlay} />

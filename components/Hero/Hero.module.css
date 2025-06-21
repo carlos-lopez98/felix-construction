@@ -110,10 +110,11 @@
 /* Generic image card styling for columns 2‑4 */
 .imageCard {
     position: relative;
+    width: 100%;
     background: #1a1f2b;
     /* subtle dark panel */
     overflow: hidden;
-    min-height: 500;
+    min-height: 500px;
     display: flex;
     flex: 1;
     align-items: center;
