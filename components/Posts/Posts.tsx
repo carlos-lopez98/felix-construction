@@ -6,6 +6,7 @@ import ig2 from '@/assets/IGPHOTOS/ig_2_compressed.jpg'
 import ig3 from '@/assets/IGPHOTOS/ig_3_compressed.jpg'
 import ig4 from '@/assets/IGPHOTOS/ig_4_compressed.jpg'
 import ig5 from '@/assets/IGPHOTOS/ig_5_compressed.jpg'
+import Image from 'next/image'
 
 const images = [
     ig1, ig2, ig3, ig4, ig5
@@ -31,7 +32,15 @@ export default function Posts() {
                     {images.map((src, idx) => (
                         <div key={idx} className={styles.imageContainer}>
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={src.src} alt={`Post ${idx + 1}`} className={styles.image} />
+                            <Image
+                                src={src.src} // or just src if src is a string
+                                alt={`Post ${idx + 1}`}
+                                fill
+                                sizes="(max-width: 768px) 500px, 500px"
+                                style={{ objectFit: 'cover', borderRadius: '4px' }}
+                                loading="lazy"
+                            />
+                            {/* <img src={src.src} alt={`Post ${idx + 1}`} className={styles.image} /> */}
                             <div className={styles.hoverText}>
                                 <p className={styles.topText}>See Us On</p>
                                 <p className={styles.bottomText}>
