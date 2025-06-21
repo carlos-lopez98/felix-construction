@@ -1,13 +1,14 @@
 import styles from './Posts.module.css'
 import { ImInstagram } from "react-icons/im";
 import RotatingSlogan from '../ui/RotatingSlogan';
+import ig1 from '@/assets/IGPHOTOS/ig_1.webp'
+import ig2 from '@/assets/IGPHOTOS/ig_2.webp'
+import ig3 from '@/assets/IGPHOTOS/ig_3.webp'
+import ig4 from '@/assets/IGPHOTOS/ig_4.webp'
+import ig5 from '@/assets/IGPHOTOS/ig_5.webp'
 
 const images = [
-    'https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg',
-    'https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg',
-    'https://images.pexels.com/photos/4254900/pexels-photo-4254900.jpeg',
-    'https://images.pexels.com/photos/6474456/pexels-photo-6474456.jpeg',
-    'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg',
+    ig1, ig2, ig3, ig4, ig5
 ]
 
 export default function Posts() {
@@ -30,7 +31,7 @@ export default function Posts() {
                     {images.map((src, idx) => (
                         <div key={idx} className={styles.imageContainer}>
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={src} alt={`Post ${idx + 1}`} className={styles.image} />
+                            <img src={src.src} alt={`Post ${idx + 1}`} className={styles.image} />
                             <div className={styles.hoverText}>
                                 <p className={styles.topText}>See Us On</p>
                                 <p className={styles.bottomText}>

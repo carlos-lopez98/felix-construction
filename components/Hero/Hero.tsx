@@ -2,9 +2,9 @@
 
 import styles from './Hero.module.css';
 import Image from 'next/image'
-import adu from '@/assets/adu.jpg'
-import bathroom from '@/assets/bathroom.jpg'
-import kitchen from '@/assets/kitchen.jpg'
+import adu from '@/assets/adu_compressed.webp'
+import bathroom from '@/assets/bathroom_compressed.webp'
+import kitchen from '@/assets/kitchen_compressed.webp'
 import { TbBuildingWarehouse } from "react-icons/tb";
 import RotatingSlogan from '@/components/ui/RotatingSlogan';
 import { circOut, motion } from 'framer-motion'

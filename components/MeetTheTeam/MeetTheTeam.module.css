@@ -1,18 +1,38 @@
 .teamSection {
+    position: relative;
     height: 100vh;
     width: 100%;
-    background-image: url('../../assets/parallax.webp');
-    /* swap later if needed */
-    background-attachment: fixed;
-    /* parallax effect */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    position: relative;
     padding-right: 4rem;
+}
+
+.parallaxBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    /* taller than 100% to support scrolling movement */
+    background-image: url('../../assets/parallax.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0rem 4rem;
 }
 
 .overlayContent {
@@ -49,6 +69,13 @@
         /* center horizontally */
         padding: 2rem;
         /* reduce padding */
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0rem 2rem;
     }
 
     .overlayContent {
