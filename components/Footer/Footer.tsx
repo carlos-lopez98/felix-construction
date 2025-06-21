@@ -28,7 +28,7 @@ export default function Footer() {
                     <div className={styles.navRow}>
 
                         <div className={styles.links}>
-                            <a href="/#hero">Home</a>
+                            <Link href="/#hero">Home</Link>
 
                             <Link href="/#hero">About</Link>
                             {isServicesPage ? (

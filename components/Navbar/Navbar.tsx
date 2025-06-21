@@ -11,7 +11,6 @@ const Navbar = () => {
     const pathname = usePathname();
     const isServicesPage = pathname === '/services';
     const [menuOpen, setMenuOpen] = useState(false)
-    const [scrolled, setScrolled] = useState(false)
     const [showBar, setShowBar] = useState(true);   // is navbar visible?
     const [lastY, setLastY] = useState(0);        // last scroll position
 
@@ -66,7 +65,7 @@ const Navbar = () => {
                             </li>
                         </ul>
 
-                        <button className={`${styles.mobileToggle} ${scrolled ? styles.hideOnScroll : ''}`}
+                        <button className={`${styles.mobileToggle}`}
                             onClick={() => setMenuOpen((open) => !open)}
                         >
                             Menu

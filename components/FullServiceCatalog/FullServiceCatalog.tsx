@@ -1,7 +1,7 @@
 'use client'
 import ServiceCard from '@/components/About/ServiceCard'
 import styles from './FullServiceCatalog.module.css'
-import { ShieldCheck, Ruler, Brush, Thermometer, Droplets, Wind, Trash2, CheckCircle, Wrench, Home, Layers, Zap, Hammer, PencilRuler, Utensils, TreePine, House } from 'lucide-react'
+import { ShieldCheck, Ruler, Brush, Thermometer, Droplets, Wind, Trash2, CheckCircle, Wrench, Home, Layers, Zap, Hammer, PencilRuler, Utensils, TreePine } from 'lucide-react'
 import { motion } from 'framer-motion'
 import FadeInWrapper from '../FadeInWrapper/FadeInWrapper'
 

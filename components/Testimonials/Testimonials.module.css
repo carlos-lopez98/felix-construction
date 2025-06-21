@@ -68,3 +68,16 @@
     color: #aaa;
     font-style: italic;
 }
+
+@media (max-width: 768px) {
+    .testimonialSection {
+        width: 100%;
+        height: auto;
+    }
+
+    .columns {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}

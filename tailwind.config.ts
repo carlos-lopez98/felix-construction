@@ -15,8 +15,8 @@ export default {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: "#1E3A8A",     // Deep Blue
-        accent: "#FE654F",      // Orange
+        primaryBlue: "#1E3A8A",     // Deep Blue
+        accentOrange: "#FE654F",      // Orange
         black: "#111827",       // Soft black
         grayLight: "#F3F4F6",   // Light background
         grayMedium: "#D1D5DB",  // Border/neutral gray

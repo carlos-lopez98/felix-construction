@@ -7,7 +7,7 @@ export default function MeetTheTeam() {
                 <div className={styles.teamDivider}>
                     <h2 className={styles.title}>Meet The Team</h2>
                     <p className={styles.description}>
-                        Our team is a family of experienced builders, designers, and problem solvers dedicated to quality craftsmanship and honest service. Every member plays a vital role in turning your vision into reality—and we treat your home like it's our own.
+                        Our team is a family of experienced builders, designers, and problem solvers dedicated to quality craftsmanship and honest service. Every member plays a vital role in turning your vision into reality—and we treat your home like it&apos;s our own.
                     </p>
                 </div>
             </div>

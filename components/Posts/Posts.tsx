@@ -29,6 +29,7 @@ export default function Posts() {
                 <div className={styles.imageRow}>
                     {images.map((src, idx) => (
                         <div key={idx} className={styles.imageContainer}>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src={src} alt={`Post ${idx + 1}`} className={styles.image} />
                             <div className={styles.hoverText}>
                                 <p className={styles.topText}>See Us On</p>

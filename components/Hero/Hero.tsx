@@ -7,7 +7,7 @@ import bathroom from '@/assets/bathroom.jpg'
 import kitchen from '@/assets/kitchen.jpg'
 import { TbBuildingWarehouse } from "react-icons/tb";
 import RotatingSlogan from '@/components/ui/RotatingSlogan';
-import { motion } from 'framer-motion'
+import { circOut, motion } from 'framer-motion'
 import Link from 'next/link'
 import FadeInWrapper from '../FadeInWrapper/FadeInWrapper';
 
@@ -30,7 +30,7 @@ const itemVariants = {
         x: 0,
         transition: {
             duration: 1.2,
-            ease: 'circOut'
+            ease: circOut
         }
     },
 };
