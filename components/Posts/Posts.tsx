@@ -1,11 +1,11 @@
 import styles from './Posts.module.css'
 import { ImInstagram } from "react-icons/im";
 import RotatingSlogan from '../ui/RotatingSlogan';
-import ig1 from '@/assets/IGPHOTOS/ig_1.webp'
-import ig2 from '@/assets/IGPHOTOS/ig_2.webp'
-import ig3 from '@/assets/IGPHOTOS/ig_3.webp'
-import ig4 from '@/assets/IGPHOTOS/ig_4.webp'
-import ig5 from '@/assets/IGPHOTOS/ig_5.webp'
+import ig1 from '@/assets/IGPHOTOS/ig_1_compressed.jpg'
+import ig2 from '@/assets/IGPHOTOS/ig_2_compressed.jpg'
+import ig3 from '@/assets/IGPHOTOS/ig_3_compressed.jpg'
+import ig4 from '@/assets/IGPHOTOS/ig_4_compressed.jpg'
+import ig5 from '@/assets/IGPHOTOS/ig_5_compressed.jpg'
 
 const images = [
     ig1, ig2, ig3, ig4, ig5
