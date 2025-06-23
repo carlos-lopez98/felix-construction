@@ -112,12 +112,12 @@ const Navbar = ({ onOpenModal }: Props) => {
                     </ul>
 
                     <div className={styles.mobileCta_container}>
-                        <a
+                        <button
                             className={styles.mobileCta}
                             onClick={onOpenModal}
                         >
                             REQUEST&nbsp;AN&nbsp;ESTIMATE
-                        </a>
+                        </button>
                     </div>
 
                 </div>
