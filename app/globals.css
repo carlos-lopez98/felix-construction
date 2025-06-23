@@ -74,6 +74,11 @@
 html,
 body {
   overflow-x: hidden;
+
+  .scroll-lock {
+    overflow: hidden;
+    height: 100vh;
+  }
 }
 
 html {

@@ -22,7 +22,6 @@ export default function Home() {
       <MeetTheTeam />
       <Posts />
       <Footer onOpenModal={() => setIsModalOpen(true)} />
-
       <ContactModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

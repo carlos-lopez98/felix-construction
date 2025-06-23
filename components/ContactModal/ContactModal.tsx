@@ -9,6 +9,8 @@ interface ContactModalProps {
 }
 
 export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [isSuccess, setIsSuccess] = useState(false)
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -21,11 +23,36 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsSubmitting(true)
+        setIsSuccess(false)
         // You can handle form submission here
-        console.log('Form submitted:', formData);
-        onClose();
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (res.ok) {
+                setIsSuccess(true)
+                setTimeout(() => {
+                    onClose();
+                    setIsSubmitting(false); // reset for next open
+                    setIsSuccess(false);
+                }, 1500);
+            } else {
+                alert('Failed to send message.');
+
+                setIsSubmitting(false);
+            }
+        } catch (error) {
+            console.error('Submit error:', error);
+            alert('Something went wrong.');
+            setIsSubmitting(false);
+        }
     };
 
     if (!isOpen) return null;
@@ -77,7 +104,14 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         onChange={handleChange}
                         required
                     />
-                    <button type="submit">Send Message</button>
+                    <button type="submit" disabled={isSubmitting}>
+                        {isSuccess ? 'Success! Message Sent' : (
+                            <>
+                                Send Message
+                                {isSubmitting && <span className={styles.spinner} />}
+                            </>
+                        )}
+                    </button>
                 </form>
             </div>
         </div>

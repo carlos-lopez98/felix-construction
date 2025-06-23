@@ -19,6 +19,18 @@ const Navbar = ({ onOpenModal }: Props) => {
     const [lastY, setLastY] = useState(0);        // last scroll position
 
     useEffect(() => {
+        if (menuOpen) {
+            document.body.classList.add('scroll-lock');
+        } else {
+            document.body.classList.remove('scroll-lock');
+        }
+
+        return () => {
+            document.body.classList.remove('scroll-lock');
+        };
+    }, [menuOpen]);
+
+    useEffect(() => {
         const handleScroll = () => {
             const y = window.scrollY;
 

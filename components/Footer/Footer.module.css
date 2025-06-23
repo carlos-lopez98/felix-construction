@@ -143,6 +143,12 @@
         justify-content: center;
     }
 
+    .phone_number {
+        color: #ffb657;
+        font-weight: bold;
+        font-size: 1.0rem;
+    }
+
     .socials {
         display: flex;
         flex-direction: row;

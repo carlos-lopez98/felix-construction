@@ -30,7 +30,6 @@ export default function Footer({ onOpenModal }: Props) {
                 <div className={styles.infoColumn}>
                     {/* Row 1 */}
                     <div className={styles.navRow}>
-
                         <div className={styles.links}>
                             <Link href="/#hero">Home</Link>
 
@@ -44,6 +43,7 @@ export default function Footer({ onOpenModal }: Props) {
 
 
                         <button className={styles.contactButton} onClick={onOpenModal}>Contact Us</button>
+                        <h1 className={styles.phone_number}>(562) 805 5403</h1>
                     </div>
 
                     <div className={styles.dividerTwo} />
