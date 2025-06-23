@@ -75,7 +75,7 @@ const Navbar = ({ onOpenModal }: Props) => {
                                 <Link href="/#meettheteam" className={styles.navLink}>About</Link>
                             </li>
                             <li>
-                                <a onClick={onOpenModal} className={styles.navLink}>Contact</a>
+                                <button onClick={onOpenModal} className={styles.navLink}>Contact</button>
                             </li>
                         </ul>
 
