@@ -34,7 +34,7 @@
     transition: transform 0.4s ease, color 0.4s ease;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
     .business_name:hover {
         cursor: pointer;
         color: #ff7a00;
@@ -291,9 +291,9 @@
         transition: color 0.8s ease;
     }
 
-    @media (hover: none) {
-        .business_name:active {
-            color: #ff7a00;
-        }
+    .business_name:hover {
+        color: #ff7a00;
+        left: 50%;
+        transform: translateX(-50%) scale(1);
     }
 }
