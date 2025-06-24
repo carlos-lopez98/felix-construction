@@ -291,7 +291,7 @@
         transition: color 0.8s ease;
     }
 
-    .business_name:hover {
+    .business_name:active {
         color: #ff7a00;
         left: 50%;
         transform: translateX(-50%) scale(1);
