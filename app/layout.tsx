@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
   title: "Felix Construction Co.",
   description: "Your Friendly Neighborhood Contractor",
+  icons: {
+    icon: './favicon.png'
+  },
 };
 
 const geistSans = Geist({
@@ -32,6 +35,9 @@ const geistSans = Geist({
   display: "swap",
   subsets: ["latin"],
 });
+
+
+
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
 
