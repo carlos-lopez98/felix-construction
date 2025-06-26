@@ -23,8 +23,8 @@ const anton = Anton({
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Felix Construction Co.",
-  description: "Your Friendly Neighborhood Contractor",
+  title: "Felix Construction",
+  description: "General Contractor",
   icons: {
     icon: './favicon.png'
   },
