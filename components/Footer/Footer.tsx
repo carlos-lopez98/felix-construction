@@ -1,7 +1,7 @@
 'use client'
 import styles from './Footer.module.css'
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
-import Logo from '@/assets/Construction Temp Logo.png'
+import Logo from '@/assets/felixconstructionlogo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'

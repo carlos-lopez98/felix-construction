@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Navbar.module.css';
-import Logo from '@/assets/Construction Temp Logo.png'
+import Logo from '@/assets/felixconstructionlogo.svg'
 import { usePathname } from 'next/navigation'
 import FadeInWrapper from '../FadeInWrapper/FadeInWrapper';
 import { useState, useEffect } from 'react'
